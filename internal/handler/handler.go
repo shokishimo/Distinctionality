@@ -8,7 +8,7 @@ import (
 )
 
 func HomeFunc(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("static/img/home.html")
+	tmpl, err := template.ParseFiles("static/templates/home.html")
 	if err != nil {
 		log.Fatal(err.Error())
 	}

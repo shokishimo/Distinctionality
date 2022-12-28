@@ -11,11 +11,11 @@ import (
 func New() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handler.HomeFunc)
+	mux.HandleFunc("/insert", handler.CreateData)
 	// mux.HandleFunc("/login", handler.Login)
 	// mux.HandleFunc("/logout", handler.Logout)
 	// mux.HandleFunc("/signup", handler.Signup)
 	// mux.HandleFunc("/profile", handler.Profile)
-	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static")))) // or http.Dir("static")
 	return mux
-	// return middleware.Logging(middleware.Auth(mux))
 }
