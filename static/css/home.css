@@ -70,17 +70,31 @@ main {
 .main {
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 340px;
     background-color: #daf9f9;
     border-radius: 20px;
     margin-bottom: 10px;
 }
 
-.main p {
+.level {
     margin: auto;
     text-align: center;
-    font-size: 26px;
+    font-size: 40px;
     padding-top: 40px;
+}
+
+.levelid {
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+.No {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
 }
 
 .btn {
