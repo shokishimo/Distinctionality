@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Distinctionality</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <form action="/" method="get">
+          <input type="hidden" name="id" id="id" value="1" />
+          <button type="submit">Distinctionality1</button>
+        </form>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <form action="/home" method="get">
+              <input type="hidden" name="id" id="id" value="1" />
+              <button type="submit">Version 1</button>
+            </form>
+          </li>
+          <li>
+            <form action="/home2" method="get">
+              <input type="hidden" name="id" id="id" value="2" />
+              <button type="submit">Version 2</button>
+            </form>
+          </li>
+          <li>
+            <form action="/home3" method="get">
+              <input type="hidden" name="id" id="id" value="3" />
+              <button type="submit">Version 3</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="main">
+                <p>Level1</p>
+                <div class="btn">
+                    <button onclick="getData1()">START!</button>
+                </div>
+            </section>
+            <section class="main">
+                <p>Level2</p>
+                <div class="btn">
+                    <button onclick="getData2()">START!</button>
+                </div>
+            </section>
+            <section class="main">
+                <p>Level3</p>
+                <div class="btn">
+                    <button onclick="getData3()">START!</button>
+                </div>
+            </section>
+            <section class="main">
+                <p>Level4</p>
+                <div class="btn">
+                    <button onclick="getData4()">START!</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2023 Distinctionality. All rights reserved.</p>
+      </footer>
+    </body>
+</html>

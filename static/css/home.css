@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+  
+header {
+    top: 0px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px;
+}
+
+.logo form {
+    margin: auto;
+    padding: auto;
+}
+
+.logo button {
+    margin: auto;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    border: 0px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav li form {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li button {
+    margin: auto;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    border: 0px;
+}
+
+main {
+    max-width: 65%;
+    margin: 20px auto 20px;
+    padding: 0px;
+}
+
+.container {
+    margin: auto;
+}
+
+.main {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: #daf9f9;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    margin: auto;
+    text-align: center;
+    font-size: 26px;
+    padding-top: 40px;
+}
+
+.btn {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.btn button {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #FFA500;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer {
+    bottom: 0; 
+    width: 100vw;
+    border-top-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
