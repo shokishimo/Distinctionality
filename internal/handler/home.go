@@ -52,6 +52,12 @@ func HomeFunc(w http.ResponseWriter, r *http.Request) {
 			w.Write([]byte(err.Error()))
 			return
 		}
+	} else if id == 3 {
+		tmpl, err = template.ParseFiles("static/templates/home3.html")
+		if err != nil {
+			w.Write([]byte(err.Error()))
+			return
+		}
 	}
 	tmpl.Execute(w, "")
 }
