@@ -1,4 +1,3 @@
-
 // Get a reference to the button element
 var button = document.getElementById("getData");
 
@@ -14,10 +13,11 @@ function getData() {
             var count = 1;
             data.forEach(element => {
                 sessionStorage.setItem('Question'+count, element.Question);
-                sessionStorage.setItem('Answer'+count, element.answer);
+                console.log(element.Answer);
+                sessionStorage.setItem('Answer'+count, element.Answer);
                 count++;
             });
-
-            fetch(requestStr, {method: 'GET'})
+            console.log(data);
+            //fetch(requestStr, {method: 'GET'});
         });
 };
