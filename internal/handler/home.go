@@ -35,5 +35,5 @@ func HomeFunc(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	tmpl.Execute(w, "")
+	tmpl.Execute(w, nil)
 }

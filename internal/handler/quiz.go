@@ -13,10 +13,11 @@ func Quiz(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Content-Type", "text/html")
 	tmpl, err := template.ParseFiles("static/templates/quiz.html")
 	if err != nil {
 		w.Write([]byte(err.Error()))
 		return
 	}
-	tmpl.Execute(w, "")
+	tmpl.Execute(w, nil)
 }
