@@ -11,7 +11,7 @@ import (
 func New() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handler.HomeFunc)
-	mux.HandleFunc("/insert", handler.CreateData)
+	mux.HandleFunc("/insertData", handler.CreateData)
 	mux.HandleFunc("/get20Quizzes", handler.Get20Quizzes)
 	// mux.HandleFunc("/login", handler.Login)
 	// mux.HandleFunc("/logout", handler.Logout)

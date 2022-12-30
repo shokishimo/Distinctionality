@@ -51,7 +51,7 @@ func Get20Quizzes() ([]QandA, error) {
 	return QandAs, nil
 }
 
-func CreateQandAs(data []QandA) error {
+func CreateQandAs(data []QandA, version string, level string) error {
 	// connect to db
 	client, err := db.Connect()
 	if err != nil {
@@ -59,7 +59,7 @@ func CreateQandAs(data []QandA) error {
 	}
 
 	// begin insertOne
-	collection := client.Database("DistinctionalityCluster").Collection("QandA")
+	collection := client.Database(version).Collection(level)
 
 	for i := range data {
 		result, err := collection.InsertOne(context.TODO(), data[i])

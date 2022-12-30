@@ -16,7 +16,17 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		return
 	}
-	w.Header().Set("Content-Type", "application/json")
+
+	// get params in the header by Get func of url.Values
+	versionStr := r.Header.Get("version")
+	levelStr := r.Header.Get("level")
+	if versionStr == "" || levelStr == "" {
+		fmt.Println("Error: Values.Get")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+	versionStr = "Distinctionality" + versionStr
+	levelStr = "level" + levelStr
 
 	// Read the request body
 	body, err := ioutil.ReadAll(r.Body)
@@ -36,12 +46,15 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 	// Print the unmarshalled slice of QandA struct
 	fmt.Println(qas)
 
-	err = model.CreateQandAs(qas)
+	err = model.CreateQandAs(qas, versionStr, levelStr)
 	if err != nil {
-		fmt.Println("wasn't able to insert")
+		w.Write([]byte("Failed to insert data"))
+		return
 	}
 
+	w.Header().Set("Content-Type", "application/text")
 	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "Succeed: Inserted a given data\n")
 	fmt.Println("Done with inserting new data!")
 	return
 }
