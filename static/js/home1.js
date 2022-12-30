@@ -1,7 +1,6 @@
 // Get a reference to the button element
 var button = document.getElementById("getData");
 
-
 // Set the calback func to be executed when the button is clicked
 function getData() {
     var level = button.value;
@@ -16,7 +15,6 @@ function getData() {
                 sessionStorage.setItem('Answer'+count, element.Answer);
                 count++;
             });
-            console.log(data);
-            //fetch(requestStr, {method: 'GET'});
+            fetch("/quize", {method: 'GET'});
         });
 };

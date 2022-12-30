@@ -13,6 +13,7 @@ func New() http.Handler {
 	mux.HandleFunc("/", handler.HomeFunc)
 	mux.HandleFunc("/insertData", handler.CreateData)
 	mux.HandleFunc("/get20Quizzes", handler.Get20Quizzes)
+	mux.HandleFunc("/quize", handler.Quize)
 	// mux.HandleFunc("/login", handler.Login)
 	// mux.HandleFunc("/logout", handler.Logout)
 	// mux.HandleFunc("/signup", handler.Signup)

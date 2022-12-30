@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Distinctionality</title>
     <link rel="stylesheet" href="/static/css/home.css">
-    <script src="/static/js/home2.js"></script>
   </head>
   <body>
     <header>
@@ -39,7 +38,7 @@
                 <p class="levelid">1</p>
                 <p class="No">No.001 ~ No.100</p>
                 <div class="btn">
-                    <button onclick="getData1()">START!</button>
+                    <button id="getData" value="1" onclick="getData()">START!</button>
                 </div>
             </section>
             <section class="main">
@@ -47,7 +46,7 @@
                 <p class="levelid">2</p>
                 <p class="No">No.101 ~ No.200</p>
                 <div class="btn">
-                    <button onclick="getData2()">START!</button>
+                    <button id="getData" value="2" onclick="getData()">START!</button>
                 </div>
             </section>
             <section class="main">
@@ -55,7 +54,7 @@
                 <p class="levelid">3</p>
                 <p class="No">No.201 ~ No.300</p>
                 <div class="btn">
-                    <button onclick="getData3()">START!</button>
+                    <button id="getData" value="3" onclick="getData()">START!</button>
                 </div>
             </section>
             <section class="main">
@@ -63,13 +62,14 @@
                 <p class="levelid">4</p>
                 <p class="No">No.301 ~ No.400</p>
                 <div class="btn">
-                    <button onclick="getData4()">START!</button>
+                    <button id="getData" value="4" onclick="getData()">START!</button>
                 </div>
             </section>
         </div>
     </main>
     <footer>
         <p>Copyright 2023 Distinctionality. All rights reserved.</p>
-      </footer>
+    </footer>
+    <script src="/static/js/home2.js"></script>
     </body>
 </html>
