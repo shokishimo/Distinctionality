@@ -13,7 +13,7 @@ func New() http.Handler {
 	mux.HandleFunc("/", handler.HomeFunc)
 	mux.HandleFunc("/insertData", handler.CreateData)
 	mux.HandleFunc("/get20Quizzes", handler.Get20Quizzes)
-	mux.HandleFunc("/quize", handler.Quize)
+	mux.HandleFunc("/quiz", handler.Quiz)
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 	return mux
 }

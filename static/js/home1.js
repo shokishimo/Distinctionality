@@ -15,6 +15,16 @@ function getData() {
                 sessionStorage.setItem('Answer'+count, element.Answer);
                 count++;
             });
-            fetch("/quize", {method: 'GET'});
-        });
+        })
+        .then(goToQuiz());
+};
+
+function goToQuiz() {
+    fetch("/quiz", {method: 'GET'})
+    .then(response => response.text())
+    .then(html => {
+        var container = document.getElementById('my-container');
+        container.innerHTML = html;
+    })
+    .catch(error => console.error(error));
 };
