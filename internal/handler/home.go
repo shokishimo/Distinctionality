@@ -3,7 +3,6 @@ package handler
 import (
 	"net/http"
 	"net/url"
-	"strconv"
 	"text/template"
 )
 
@@ -22,38 +21,15 @@ func HomeFunc(w http.ResponseWriter, r *http.Request) {
 	// get id param value by Get func of url.Values
 	idStr := values.Get("id")
 
-	// simple "/" with no param -> return home page
-	if idStr == "" {
-		tmpl, err := template.ParseFiles("static/templates/home1.html")
-		if err != nil {
-			w.Write([]byte(err.Error()))
-			return
-		}
-		tmpl.Execute(w, "")
-	}
-
-	// Otherwise get id param value of type String and convert it into int
-	id, err := strconv.Atoi(idStr)
-	if err != nil {
-		w.Write([]byte(err.Error()))
-		return
-	}
-
 	var tmpl *template.Template
-	if id == 1 {
+	if idStr == "" || idStr == "1" {
 		tmpl, err = template.ParseFiles("static/templates/home1.html")
 		if err != nil {
 			w.Write([]byte(err.Error()))
 			return
 		}
-	} else if id == 2 {
+	} else if idStr == "2" {
 		tmpl, err = template.ParseFiles("static/templates/home2.html")
-		if err != nil {
-			w.Write([]byte(err.Error()))
-			return
-		}
-	} else if id == 3 {
-		tmpl, err = template.ParseFiles("static/templates/home3.html")
 		if err != nil {
 			w.Write([]byte(err.Error()))
 			return
