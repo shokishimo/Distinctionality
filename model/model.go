@@ -13,7 +13,7 @@ type QandA struct {
 	Answer   string `json: answer`
 }
 
-func Get20Quizzes() ([]QandA, error) {
+func Get20Quizzes(version string, level string) ([]QandA, error) {
 	var QandAs []QandA
 
 	// connect to db
@@ -24,8 +24,12 @@ func Get20Quizzes() ([]QandA, error) {
 	// Disconnect from db after execution by defer
 	defer db.Disconnect(client)
 
+	// modify input string to be a correct param str to access database
+	version = "Distinctionality" + version
+	level = "level" + level
+
 	// get 20 quizzes
-	collection := client.Database("DistinctionalityCluster").Collection("QandA")
+	collection := client.Database(version).Collection(level)
 	pipeline := []bson.D{bson.D{{"$sample", bson.D{{"size", 20}}}}}
 	cursor, err := collection.Aggregate(context.TODO(), pipeline)
 	if err != nil {
@@ -33,6 +37,7 @@ func Get20Quizzes() ([]QandA, error) {
 	}
 	defer cursor.Close(context.TODO())
 
+	// Decode one QandA data at a time
 	for cursor.Next(context.TODO()) {
 		var each QandA
 		err := cursor.Decode(&each)
