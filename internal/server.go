@@ -14,10 +14,6 @@ func New() http.Handler {
 	mux.HandleFunc("/insertData", handler.CreateData)
 	mux.HandleFunc("/get20Quizzes", handler.Get20Quizzes)
 	mux.HandleFunc("/quize", handler.Quize)
-	// mux.HandleFunc("/login", handler.Login)
-	// mux.HandleFunc("/logout", handler.Logout)
-	// mux.HandleFunc("/signup", handler.Signup)
-	// mux.HandleFunc("/profile", handler.Profile)
-	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static")))) // or http.Dir("static")
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 	return mux
 }
