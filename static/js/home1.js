@@ -13,7 +13,6 @@ function getData() {
             var count = 1;
             data.forEach(element => {
                 sessionStorage.setItem('Question'+count, element.Question);
-                console.log(element.Answer);
                 sessionStorage.setItem('Answer'+count, element.Answer);
                 count++;
             });
