@@ -3,8 +3,8 @@ var button = document.getElementById("getData");
 
 // Set the calback func to be executed when the button is clicked
 function getData() {
-    var level = button.value;
-    var requestStr = '/get20Quizzes?version=1&level=' + level
+    var values = button.value.split(',');
+    var requestStr = '/get20Quizzes?version=' + values[0] + '&level=' + values[1];
 
     fetch(requestStr, {method: 'GET'})
         .then(response => response.json())
@@ -20,11 +20,9 @@ function getData() {
 };
 
 function goToQuiz() {
-    fetch("/quiz", {method: 'GET'})
-    .then(response => response.text())
-    .then(html => {
-        var container = document.getElementById('my-container');
-        container.innerHTML = html;
-    })
-    .catch(error => console.error(error));
+    var form = document.createElement('form');
+    form.method = 'GET';
+    form.action = '/quiz';
+    document.body.appendChild(form);
+    form.submit();
 };
