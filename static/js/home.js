@@ -1,10 +1,6 @@
-// Get a reference to the button element
-var button = document.getElementById("getData");
-
 // Set the calback func to be executed when the button is clicked
-function getData() {
-    var values = button.value.split(',');
-    var requestStr = '/get20Quizzes?version=' + values[0] + '&level=' + values[1];
+function getData(param1, param2) {
+    var requestStr = '/get20Quizzes?version=' + param1 + '&level=' + param2;
 
     fetch(requestStr, {method: 'GET'})
         .then(response => response.json())
@@ -16,7 +12,7 @@ function getData() {
                 count++;
             });
         })
-        .then(goToQuiz());
+        .then(goToQuiz);
 };
 
 function goToQuiz() {
