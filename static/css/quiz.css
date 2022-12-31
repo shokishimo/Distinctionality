@@ -21,7 +21,7 @@ main {
 
 .main2 {
     margin: auto;
-    margin-top: -35px;
+    margin-top: -40px;
     height: 100px;
     background-color: #daf9f9;
     border-radius: 24px;
@@ -61,7 +61,7 @@ main {
 
 .btn {
     margin: auto;
-    padding-top: 30px;;
+    padding-top: 35px;;
 }
 
 .left, .right {
