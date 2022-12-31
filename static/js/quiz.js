@@ -21,7 +21,11 @@ window.onload = function() {
     // Question text
     question.innerHTML = qData;
 
-    midBtn.innerHTML = ' answer ';
+    midBtn.innerHTML = 'answer';
+
+    if (questionNo) {
+        leftBtn.setAttribute("hidden", "hidden");
+    }
 };
 
 function flip() {
@@ -35,7 +39,7 @@ function flip() {
     } else {
         valueToShow = sessionStorage.getItem('Question'+questionNo);
         question.innerHTML = valueToShow;
-        midBtn.innerHTML = " answer "
+        midBtn.innerHTML = "answer"
         answerOrQuestion = true;
     }
 };

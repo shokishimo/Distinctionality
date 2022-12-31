@@ -28,7 +28,7 @@ main {
     text-align: center;
 }
 
-.level, .No, .left, .flip, .right {
+.main, .main2 {
     -webkit-user-select: none;  /* Chrome, Safari, Opera */
     -moz-user-select: none;     /* Firefox */
     -ms-user-select: none;      /* Internet Explorer */
