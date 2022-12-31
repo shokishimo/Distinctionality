@@ -4,7 +4,7 @@ body {
 
 main {
     margin: auto;
-    max-width: 40%;
+    max-width: 35%;
     padding-top: 100px;
 }
 
@@ -13,7 +13,7 @@ main {
 }
 
 .main {
-    height: 400px;
+    height: 350px;
     background-color: #daf9f9;
     border-radius: 24px;
     margin-bottom: 10px;
@@ -22,15 +22,16 @@ main {
 
 .level {
     margin: auto;
-    padding-top: 5px;
-    font-size: 22px;
+    padding-top: 10px;
+    font-size: 30px;
 }
 
 .No {
     margin: auto;
     text-align: left;
     padding-top: 30px;
-    padding-left: 70px;
+    padding-left: 100px;
+    font-size: 25px
 }
 
 .quiz-area {
@@ -40,5 +41,40 @@ main {
 
 #qanda {
     margin: auto;
-    font-size: 32px;
+    font-size: 35px;
+}
+
+.btn {
+    margin: auto;
+    padding-top: 45px;
+}
+
+.left, .right {
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50%;
+    border-width: 0px;
+    color: white;
+    background-color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.flip {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    border-width: 0px;
+    color: white;
+    background-color: orangered;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin: 50px;
 }
