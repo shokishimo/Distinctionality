@@ -23,8 +23,40 @@ window.onload = function() {
 
     midBtn.innerHTML = 'answer';
 
-    if (questionNo) {
+    if (questionNo == 1) {
         leftBtn.setAttribute("hidden", "hidden");
+    }
+};
+
+function goBack() {
+    questionNo--;
+    if (questionNo == 1) {
+        leftBtn.setAttribute("hidden", "hidden");
+    } else {
+        leftBtn.removeAttribute("hidden");
+    }
+
+    questionNoArea.innerHTML = 'Q' + questionNo;
+    valueToShow = sessionStorage.getItem('Question'+questionNo);
+    question.innerHTML = valueToShow;
+    midBtn.innerHTML = "answer"
+    answerOrQuestion = true;
+};
+
+function goNext() {
+    if (questionNo == 20) {
+        goToEndPage();
+    } else {
+        questionNo++;
+        if (questionNo == 2) {
+            leftBtn.removeAttribute("hidden");
+        }
+
+        questionNoArea.innerHTML = 'Q' + questionNo;
+        valueToShow = sessionStorage.getItem('Question'+questionNo);
+        question.innerHTML = valueToShow;
+        midBtn.innerHTML = "answer"
+        answerOrQuestion = true;
     }
 };
 
@@ -43,3 +75,7 @@ function flip() {
         answerOrQuestion = true;
     }
 };
+
+function goToEndPage() {
+
+}
