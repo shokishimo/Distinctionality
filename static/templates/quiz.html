@@ -10,16 +10,18 @@
 <body>
     <main>
         <div id="container">
-            <section class="main">
+            <section class="main" onclick="flip()">
                 <p class="level">Level 1</p>
                 <p class="No"></p>
                 <div class="quiz-area">
                     <p id="qanda"></p>
                 </div>
+            </section>
+            <section class="main2">
                 <div class="btn">
                     <button class="left" onclick="goBack()">＜</button>
-                    <button class="flip" onclick="flip()">answer</button>
-                    <button class="left" onclick="goBack()">＞</button>
+                    <button class="flip" onclick="flip()"></button>
+                    <button class="right" onclick="goNext()">＞</button>
                 </div>
             </section>
         </div>

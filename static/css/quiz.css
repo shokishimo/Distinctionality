@@ -4,7 +4,7 @@ body {
 
 main {
     margin: auto;
-    max-width: 35%;
+    width: 35%;
     padding-top: 100px;
 }
 
@@ -13,11 +13,26 @@ main {
 }
 
 .main {
-    height: 350px;
+    height: 250px;
     background-color: #daf9f9;
     border-radius: 24px;
-    margin-bottom: 10px;
     text-align: center;
+}
+
+.main2 {
+    margin: auto;
+    margin-top: -35px;
+    height: 100px;
+    background-color: #daf9f9;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.level, .No, .left, .flip, .right {
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer */
+    user-select: none;          /* Standard syntax */
 }
 
 .level {
@@ -46,7 +61,7 @@ main {
 
 .btn {
     margin: auto;
-    padding-top: 45px;
+    padding-top: 30px;;
 }
 
 .left, .right {
@@ -76,5 +91,5 @@ main {
     font-size: 16px;
     cursor: pointer;
     margin-left: 50px;
-    margin: 50px;
+    margin-right: 50px;
 }
