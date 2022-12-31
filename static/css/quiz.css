@@ -1,28 +1,44 @@
-main {
+body {
     margin: auto;
 }
 
-#my-container {
+main {
+    margin: auto;
+    max-width: 40%;
+    padding-top: 100px;
+}
+
+#container {
     margin: auto;
 }
 
 .main {
-    margin: auto;
+    height: 400px;
+    background-color: #daf9f9;
+    border-radius: 24px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .level {
     margin: auto;
+    padding-top: 5px;
+    font-size: 22px;
 }
 
 .No {
     margin: auto;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 70px;
 }
 
 .quiz-area {
     margin: auto;
+    padding-top: 30px;
 }
 
 #qanda {
     margin: auto;
+    font-size: 32px;
 }
