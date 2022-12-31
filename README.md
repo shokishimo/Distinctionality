@@ -11,6 +11,7 @@
 |   |---handler
 |   |   |---home.go
 |   |   |---insertData.go
+|   |   |---quiz.go
 |   |   |---read20Quizzes.go
 |   |---server.go
 |
