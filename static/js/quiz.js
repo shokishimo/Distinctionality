@@ -15,7 +15,7 @@ window.onload = function() {
     midBtn = document.querySelector('.flip');
 
     // question number
-    questionNoArea.innerHTML = 'Q' + questionNo;
+    questionNoArea.innerHTML = 'Q' + questionNo + '/20';
     // get question from sessionStorage
     var qData = sessionStorage.getItem('Question'+questionNo);
     // Question text
@@ -36,7 +36,7 @@ function goBack() {
         leftBtn.removeAttribute("hidden");
     }
 
-    questionNoArea.innerHTML = 'Q' + questionNo;
+    questionNoArea.innerHTML = 'Q' + questionNo + '/20';
     valueToShow = sessionStorage.getItem('Question'+questionNo);
     question.innerHTML = valueToShow;
     midBtn.innerHTML = "answer"
@@ -52,7 +52,7 @@ function goNext() {
             leftBtn.removeAttribute("hidden");
         }
 
-        questionNoArea.innerHTML = 'Q' + questionNo;
+        questionNoArea.innerHTML = 'Q' + questionNo + '/20';
         valueToShow = sessionStorage.getItem('Question'+questionNo);
         question.innerHTML = valueToShow;
         midBtn.innerHTML = "answer"
@@ -77,5 +77,9 @@ function flip() {
 };
 
 function goToEndPage() {
-
+    var form = document.createElement('form');
+    form.method = 'GET';
+    form.action = '/endQuiz';
+    document.body.appendChild(form);
+    form.submit();
 }

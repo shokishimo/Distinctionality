@@ -14,6 +14,7 @@ func New() http.Handler {
 	mux.HandleFunc("/insertData", handler.CreateData)
 	mux.HandleFunc("/get20Quizzes", handler.Get20Quizzes)
 	mux.HandleFunc("/quiz", handler.Quiz)
+	mux.HandleFunc("/endQuiz", handler.EndQuiz)
 	// http.HandleFunc("/favicon.ico", func (w http.ResponseWriter, r *http.Request) {
 	// 	http.ServeFile(w, r, "favicon.ico")
 	// })
