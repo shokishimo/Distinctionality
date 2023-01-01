@@ -43,9 +43,6 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Print the unmarshalled slice of QandA struct
-	fmt.Println(qas)
-
 	err = model.CreateQandAs(qas, versionStr, levelStr)
 	if err != nil {
 		w.Write([]byte("Failed to insert data"))
@@ -55,6 +52,5 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/text")
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "Succeed: Inserted a given data\n")
-	fmt.Println("Done with inserting new data!")
 	return
 }
