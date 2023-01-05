@@ -17,6 +17,8 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Todo: change the way to pass parameters. Header parameter -> Path parameter
+
 	// get params in the header by Get func of url.Values
 	versionStr := r.Header.Get("version")
 	levelStr := r.Header.Get("level")
