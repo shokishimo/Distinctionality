@@ -11,7 +11,7 @@ import (
 func main() {
 	srvMux := server.New()
 	fmt.Println("Server is running on port 8080")
-	if err := http.ListenAndServe("localhost:8080", srvMux); err != nil {
+	if err := http.ListenAndServe("https://distinctionality.onrender.com:8080", srvMux); err != nil {
 		log.Fatal("Error in running the server")
 		fmt.Printf("e: %v\n", err)
 	}
