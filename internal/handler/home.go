@@ -1,12 +1,14 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"net/url"
 	"text/template"
 )
 
 func HomeFunc(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("/ is accessed")
 	if r.Method != http.MethodGet {
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		return
