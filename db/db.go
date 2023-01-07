@@ -16,13 +16,13 @@ func Connect() (*mongo.Client, error) {
 	var uri string
 	if err := godotenv.Load(); err != nil {
 		log.Println("No .env file found")
-		uri = "mongodb+srv://skishimo2:sklDbnXY5npS6IGr@distinctionalitycluster.qv9iazy.mongodb.net/?retryWrites=true&w=majority"
-		// return client, err
+		uri = ""
+		return client, err
 	}
 	uri = os.Getenv("MONGODB_URI")
 	if uri == "" {
-		uri = "mongodb+srv://skishimo2:sklDbnXY5npS6IGr@distinctionalitycluster.qv9iazy.mongodb.net/?retryWrites=true&w=majority"
-		// log.Fatal("You must set your 'MONGODB_URI' environmental variable. See\n\t https://www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
+		uri = ""
+		log.Fatal("You must set your 'MONGODB_URI' environmental variable. See\n\t https://www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
 	}
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	if err != nil {
