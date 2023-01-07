@@ -11,7 +11,7 @@ import (
 func main() {
 	srvMux := server.New()
 	fmt.Println("Server is running")
-	if err := http.ListenAndServe(":443", srvMux); err != nil {
+	if err := http.ListenAndServe(":3000", srvMux); err != nil {
 		log.Fatal("Error in running the server")
 		fmt.Printf("e: %v\n", err)
 	}
