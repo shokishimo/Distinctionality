@@ -1,5 +1,5 @@
-#### Go web application where you can take English words quizzes.
-# Here is the URL to access the site. -> https://distinctionality.onrender.com
+### Go web application where you can take English words quizzes.
+#### Here is the URL to access the site. -> https://distinctionality.onrender.com
 
 ##### Project Structure
 
