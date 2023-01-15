@@ -1,7 +1,7 @@
 /* Styles for screens smaller than 800px */
 @media only screen and (max-width: 800px) {
     body {
-        font-size: 14px;
+        font-size: 14px;     
     }
 
     main {
@@ -10,17 +10,11 @@
     }
 }
 
-/* Styles for screens larger than 600px */
-@media only screen and (min-width: 600px) {
+/* Styles for screens larger than 800px */
+@media only screen and (min-width: 800px) {
     body {
         margin: auto;
         background-color: whitesmoke;
-    }
-    
-    main {
-        margin: auto;
-        width: 35%;
-        padding-top: 100px;
     }
 }
 

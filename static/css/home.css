@@ -1,8 +1,29 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    background-color: whitesmoke;
+/* Styles for screens smaller than 800px */
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+
+/* Styles for screens larger than 800px */
+@media only screen and (min-width: 800px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+        background-color: whitesmoke;
+    }
+    
+    main {
+        max-width: 65%;
+        margin: 20px auto 20px;
+        padding: 0px;
+    }
 }
   
 header {
@@ -56,12 +77,6 @@ nav li button {
     color: #fff;
     background-color: #333;
     border: 0px;
-}
-
-main {
-    max-width: 65%;
-    margin: 20px auto 20px;
-    padding: 0px;
 }
 
 .container {
