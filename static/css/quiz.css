@@ -1,12 +1,27 @@
-body {
-    margin: auto;
-    background-color: whitesmoke;
+/* Styles for screens smaller than 800px */
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        margin: auto;
+        padding-top: 50px;
+    }
 }
 
-main {
-    margin: auto;
-    width: 35%;
-    padding-top: 100px;
+/* Styles for screens larger than 600px */
+@media only screen and (min-width: 600px) {
+    body {
+        margin: auto;
+        background-color: whitesmoke;
+    }
+    
+    main {
+        margin: auto;
+        width: 35%;
+        padding-top: 100px;
+    }
 }
 
 #container {
