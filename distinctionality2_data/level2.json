@@ -81,5 +81,26 @@
     {"question": "pick up the pace", "answer": "ペースを上げる"},
     {"question": "chip away at sth", "answer": "～にコツコツ取り組む"},
     {"question": "pick sth up", "answer": "（悪いことや趣味を）始める"},
-    {"question": "get under sb's skin", "answer": "イライラさせる"}
+    {"question": "get under sb's skin", "answer": "イライラさせる"},
+
+    {"question": "on board with sth", "answer": "〜に賛成した"},
+    {"question": "keep sb in the loop", "answer": "〜に何かあったら教える"},
+    {"question": "wishful thinking", "answer": "だといいな、希望的観測"},
+    {"question": "if it were up to me", "answer": "もし自分が決めていいなら"},
+    {"question": "keep it between us", "answer": "誰にも言わない、秘密にする"},
+    {"question": "make sb's day", "answer": "〜の最高の一日になる"},
+    {"question": "book-smart", "answer": "頭が良い（けど残念な）"},
+    {"question": "street-smart", "answer": "世渡り上手な"},
+    {"question": "backstabber", "answer": "裏切り者"},
+    {"question": "I'm game", "answer": "もちろん、いいよ"},
+    {"question": "get one's act together", "answer": "しっかりする、ちゃんとする"},
+    {"question": "at the end of the day", "answer": "結局は"},
+    {"question": "drive a hard bargain", "answer": "強気の交渉をする"},
+    {"question": "might as well (do)", "answer": "〜しておく、してもいい"},
+    {"question": "high-level", "answer": "大まかな、ざっくりした"},
+    {"question": "in the mix", "answer": "候補に入った"},
+    {"question": "stack up", "answer": "つじつまがあう"},
+    {"question": "one way or another", "answer": "なんとかして、なんとしてでも"},
+    {"question": "not the end of the world", "answer": "大したことではない"},
+    {"question": "hit it off", "answer": "意気投合する、仲良くなる"}
 ]
