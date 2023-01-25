@@ -18,6 +18,8 @@ func New() http.Handler {
 	// http.HandleFunc("/favicon.ico", func (w http.ResponseWriter, r *http.Request) {
 	// 	http.ServeFile(w, r, "favicon.ico")
 	// })
+
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
+	mux.HandleFunc("/404", http.NotFound)
 	return mux
 }
