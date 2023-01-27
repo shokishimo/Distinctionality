@@ -8,6 +8,10 @@
         margin: auto;
         padding-top: 50px;
     }
+    
+    #container {
+        margin: auto;
+    }
 }
 
 /* Styles for screens larger than 800px */
@@ -16,10 +20,11 @@
         margin: auto;
         background-color: whitesmoke;
     }
-}
 
-#container {
-    margin: auto;
+    #container {
+        margin: auto;
+        width: 85%;
+    }
 }
 
 .main {
